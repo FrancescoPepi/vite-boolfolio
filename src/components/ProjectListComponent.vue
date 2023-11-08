@@ -1,5 +1,5 @@
 <script>
-// import HeaderComponent from "./components/Header.vue";
+import ProjectCardComponent from "./ProjectCardComponent.vue";
 
 export default {
   data() {
@@ -14,9 +14,9 @@ export default {
   // 		},
   // 	},
 
-  // components: {
-  //	MyComponent,
-  // },
+  components: {
+    ProjectCardComponent,
+  },
 
   props: {
     projects: Array,
@@ -29,9 +29,7 @@ export default {
     <h2>{{ title }}</h2>
     <div class="row row-cols-3 g-4">
       <div class="col" v-for="project in projects">
-        <div class="card">
-          <div class="card-body">{{ project.name }}</div>
-        </div>
+        <ProjectCardComponent :project="project" />
       </div>
     </div>
   </div>

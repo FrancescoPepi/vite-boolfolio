@@ -18,14 +18,16 @@ export default {
   //	MyComponent,
   // },
 
-  // 	props:{
-  // 		passaggioInfo: stringa,
-  //  	 },
+  props: {
+    project: Object,
+  },
 };
 </script>
 
 <template>
-  <h1>{{ title }}</h1>
+  <div class="card">
+    <div class="card-body">{{ project.name }}</div>
+  </div>
 </template>
 
 <style lang="scss" scoped></style>
